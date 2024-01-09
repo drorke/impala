@@ -56,6 +56,11 @@ if [ -z "$IMPALA_TOOLCHAIN" ]; then
   return 1
 fi
 
+export NATIVE_TOOLCHAIN_HOME=mytoolchain
+export IMPALA_TOOLCHAIN_REPO=https://github.com/drorke/native-toolchain.git
+export IMPALA_TOOLCHAIN_BRANCH=snappy_1_1_10
+export IMPALA_TOOLCHAIN_COMMIT_HASH=0e967386ef9a2dd5539032afd5922b2406f38dfc
+
 #######################################################################################
 # Variables that can be overridden by impala-config-*.sh but not by environment vars. #
 # All component versions and other variables that get updated periodically or between #
@@ -188,7 +193,7 @@ export IMPALA_RAPIDJSON_VERSION=1.1.0
 unset IMPALA_RAPIDJSON_URL
 export IMPALA_RE2_VERSION=20190301
 unset IMPALA_RE2_URL
-export IMPALA_SNAPPY_VERSION=1.1.8
+export IMPALA_SNAPPY_VERSION=1.1.10
 unset IMPALA_SNAPPY_URL
 export IMPALA_SQUEASEL_VERSION=3.3
 unset IMPALA_SQUEASEL_URL
